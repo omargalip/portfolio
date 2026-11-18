@@ -350,10 +350,10 @@ footer{border-top:1px solid var(--hair)}
 .vc.more b{font-size:44px;font-weight:400;color:var(--red);line-height:1}
 .vc.more span{position:static;background:none;padding:0 12px;text-align:center}
 /* player */
-.vp{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.96);display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .35s}
+.vp{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:16px;opacity:0;pointer-events:none;transition:opacity .35s}
 .vp.open{opacity:1;pointer-events:auto}
-.vp video{max-height:88vh;max-width:94vw;border-radius:12px;background:#000}
-.vp .x{position:absolute;top:16px;left:16px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:18px;cursor:pointer}
+.vp video{order:1;max-height:calc(100svh - 120px);max-width:100%;border-radius:12px;background:#000}
+.vp .x{position:static;order:2;flex:none;display:flex;align-items:center;gap:8px;height:48px;padding:0 22px;border-radius:99px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font:500 15px Expo,sans-serif;cursor:pointer}
 
 /* identities carousel */
 .idl{display:flex!important;flex-direction:row!important;gap:18px!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:10px calc(50vw - min(23vw,320px)) 10px!important}
@@ -469,7 +469,7 @@ footer{border-top:1px solid var(--hair)}
   </div>
 </section>
 <footer>© 2026 OMAR GHALIB</footer>
-<div class="vp" id="vp" role="dialog" aria-modal="true"><button class="x" aria-label="إغلاق">✕</button><video controls playsinline preload="none"></video></div>
+<div class="vp" id="vp" role="dialog" aria-modal="true"><button class="x" aria-label="إغلاق">✕ إغلاق</button><video controls playsinline preload="none"></video></div>
 <div class="cv" id="cv" role="dialog" aria-modal="true"><div class="cv-h"><button class="x" aria-label="إغلاق">✕</button><div style="flex:1"><b id="cvT"></b><small id="cvS"></small></div><a id="cvB" target="_blank" rel="noopener">Behance ↗</a></div><div class="cv-b" id="cvBody"></div></div>
 <div class="lb" id="lb" role="dialog" aria-label="عرض التصميم"><button class="x" aria-label="إغلاق">✕</button><button class="p" aria-label="السابق">›</button><button class="n" aria-label="التالي">‹</button><img alt=""></div>
 
